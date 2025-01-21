@@ -572,87 +572,96 @@
   
   
   /* Responsive Design */
-  /* navbar */
   /* Mobile Responsive CSS */
-  @media (max-width: 768px) {
-      /* Navbar Container */
-      .navbar {
-          display: flex;
-          justify-content: space-between; /* Space between logo and menu icon */
-          align-items: center;
-          padding: 1rem;
-          background-color: #fff; /* White background */
-          border-bottom: 3px solid orange; /* Orange border at the bottom */
-          position: relative; /* For positioning dropdown if required */
-      }
+@media (max-width: 768px) {
+    /* Navbar Container */
+    .navbar {
+        display: flex;
+        justify-content: space-between; /* Space between logo and menu */
+        align-items: center;
+        padding: 1rem;
+        background-color: #fff; /* White background */
+        border-bottom: 3px solid orange; /* Orange border at bottom */
+        position: relative; /* For positioning */
+    }
+
+    /* Logo Styling */
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 40px; /* Adjust logo size */
+        height: auto;
+    }
+
+    .logo .Bold {
+        display: none; /* Hide the 'School' span on mobile */
+    }
+
+    /* Navigation Links */
+    .nav-links {
+        display: none; /* Hide the navigation links on mobile */
+    }
+
+    /* Contact Button */
+    .contact-btn {
+        display: none; /* Hide the contact button on mobile */
+    }
+
+    /* Hamburger Menu Button */
+    .menu-icon {
+        display: flex; /* Show the menu button on mobile */
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25px;
+        height: 18px;
+        cursor: pointer;
+    }
+
+    .menu-icon span {
+        display: block;
+        width: 100%;
+        height: 3px; /* Line thickness */
+        background-color: #000; /* Black lines for menu */
+        border-radius: 2px; /* Slight rounding */
+    }
+}
+
   
-      /* Logo Section */
-      .navbar .logo {
-          display: flex;
-          align-items: center;
-          font-size: 1.5rem; /* Adjust font size */
-          font-weight: bold;
-          color: #000; /* Black text color */
-      }
-  
-      .navbar .logo img {
-          width: 40px; /* Adjust logo image size */
-          height: auto;
-          margin-right: 0.5rem; /* Space between image and text */
-      }
-  
-      /* Hamburger Menu Button */
-      .navbar .menu-icon {
-          width: 40px;
-          height: 40px;
-          background-color: #000; /* Black background for button */
-          border-radius: 50%; /* Circular button */
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer; /* Pointer cursor on hover */
-      }
-  
-      .navbar .menu-icon span {
-          width: 20px; /* Adjust line width */
-          height: 2px; /* Line thickness */
-          background-color: #fff; /* White color for lines */
-          display: block;
-          margin: 3px 0; /* Spacing between lines */
-      }
-  
-      /* Hide Navigation Links Completely */
-      .nav-content {
-          display: none; /* Navigation links will not appear on mobile */
-      }
-  }
-  
-  
-  /* Banner */
-  @media (max-width: 768px) {
-      .banner {
-          flex-direction: column; /* Stack image and content vertically */
-          align-items: center; /* Center-align content */
-          padding: 1rem; /* Adjust padding */
-      }
-  
-      .banner-image {
-          order: -1; /* Move image to the top */
-          width: 100%; /* Image takes full width */
-          text-align: center;
-      }
-  
-      .banner-image img {
-          width: 90%; /* Resize the image */
-          height: auto; /* Maintain aspect ratio */
-      }
-  
-      .banner-content {
-          text-align: center; /* Center-align text */
-          max-width: 100%;
-          margin-top: 1rem;
-      }
-  }
+  /* Banner Styling */
+@media (max-width: 768px) {
+    .banner {
+        display: flex;
+        flex-direction: column; /* Stack image and content vertically */
+        align-items: center; /* Center-align content */
+        padding: 1rem; /* Adjust padding */
+    }
+
+    .banner-image {
+        order: -1; /* Move image to the top */
+        width: 100%; /* Image takes full width */
+        text-align: center;
+    }
+
+    .banner-image img {
+        width: 90%; /* Resize the image */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .banner-content {
+        text-align: center; /* Center-align text */
+        max-width: 100%; /* Full width for text */
+        margin-top: 1rem; /* Add spacing between image and content */
+    }
+
+    /* Hide Arrows on Mobile */
+    .arrows {
+        display: none; /* Do not display arrows on smaller screens */
+    }
+}
+
   /* standard curriculam */
   @media (max-width: 768px) {
       .cards {
@@ -803,7 +812,7 @@
           cursor: pointer;
       }
   
-      /* Footer Section (if applicable) */
+      /* Footer Section  */
       .footer-content {
           text-align: left; /* Align footer text to the left */
           padding: 1rem;
