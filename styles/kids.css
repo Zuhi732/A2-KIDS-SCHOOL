@@ -18,71 +18,103 @@
   }
   
   /* Navbar */
-  .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #FFFFFF;
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  .Bold{
-      font-weight: bold;
-      font-size: larger;
-  }
-  .navbar .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-  }
-  
-  .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-  }
-  
-  .nav-links a {
-      text-decoration: none; /* No underline */
-      font-weight: 600; /* Bold font */
-  }
-  
-  .nav-links .nth-child1 {
-      color: orange; /* Home */
-  }
-  
-  .nav-links .nth-child2 {
-      color: blue; /* About */
-  }
-  
-  .nav-links .nth-child3 {
-      color: skyblue; /* Facilities */
-  }
-  
-  .nav-links .nth-child4 {
-      color: purple; /* Admission */
-  }
-  /* banner text decoration */
-  .colorEm{
-      color: #fb8c00;
-  }
-  .colortw{
-      color: skyblue;
-  }
-  /* Optional hover effect */
-  .nav-links a:hover {
-      opacity: 0.8; /* Slightly dim background color on hover */
-  }
-  
-  
-  .contact-btn {
-      background-color: #fbc02d;
-      color: #fff;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-  }
+  /* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and right-side content */
+    align-items: center; /* Vertically align items in the navbar */
+    padding: 1rem 2rem; /* Adjust padding for spacing */
+    background-color: #fff; /* Navbar background color */
+    position: relative; /* Ensure proper alignment */
+    z-index: 10; /* Ensure navbar stays on top */
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px; /* Adjust logo size */
+    height: auto;
+    margin-right: 0.5rem; /* Space between logo and text */
+}
+
+.logo .Bold {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    white-space: nowrap; /* Prevent logo text from wrapping */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem; /* Space between nav items */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    flex: 1; /* Allow navigation links to take remaining space */
+    justify-content: center; /* Center the navigation links */
+    align-items: center; /* Ensure vertical alignment */
+}
+
+/* Default Link Styling */
+.nav-links li a {
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Adjust font size */
+    color: #000; /* Default text color (black) */
+    font-weight: 500; /* Adjust font weight */
+    white-space: nowrap; /* Prevent text wrapping */
+    transition: color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    color: #fbc02d; /* Highlight color on hover */
+}
+
+/* Active Link Styling */
+.nav-links .nth-child1  {
+    color: #f57c00; /* Orange for Home */
+}
+
+.nav-links .nth-child2  {
+    color: #1976d2; /* Blue for About */
+}
+
+.nav-links .nth-child3  {
+    color: #388e3c; /* Green for Facilities */
+}
+
+.nav-links .nth-child4  {
+    color: #8e24aa; /* Purple for Admission */
+}
+
+
+/* Contact Button */
+.contact-btn {
+    background-color: #fbc02d; /* Button background */
+    color: #fff; /* Button text color */
+    border: none;
+    padding: 0.5rem 1rem; /* Internal button padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    margin-left: 1rem; /* Add space from the navigation links */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Fix Logo and Links Alignment */
+.navbar .logo {
+    flex-shrink: 0; /* Prevent logo from shrinking */
+}
+
+/* Responsive Menu Icon (for mobile) */
+.menu-icon {
+    display: none; /* Hide menu icon by default */
+}
+
   
   /* Banner */
   .banner {
@@ -117,11 +149,10 @@
   
   /* Curriculum Section */
   .curriculum {
-      background-image: url('../assets/bg.png'); /* Reference your uploaded image */
+      background-image: url('../B11-A2-Kids-School/assets/bg.png'); /* Reference your uploaded image */
       text-align: center;
       padding: 3rem 1.5rem;
-      background-size: 100%; /* Adjusts image scaling */
-      background-position: center;
+      /* background-position: center; */
       background-repeat: no-repeat;
       /* background-color: #f9f9f9; Fallback color */
       position: relative;
@@ -135,6 +166,7 @@
       left: 0;
       width: 100%;
       height: 100%;
+      background-image: url(../B11-A2-Kids-School/assets/bg.png);
       background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for readability */
       z-index: 1;
   }
@@ -303,20 +335,23 @@
   }
   
   .arrow:hover {
-      background-color: #e69100;
+      background-color: orangered;
   }
   
-  .stories {
-      background-image: url("../assets/bg.png");
-      background-color: #f4f4f4;
-      padding: 2rem;
-      text-align:center;
-  } 
   
-  .img {
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), #fea501) , url("../assets/bg.png");
-  }
-  
+/* Adjust .stories to avoid overriding */
+.stories {
+    padding: 2rem;
+    text-align: center;
+    background-image: 
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(254, 165, 1, 0.8)),
+        url('../B11-A2-Kids-School/assets/bg.png');
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    position: relative;
+}
+
   .stories h2 {
       font-size: 2rem;
       margin-bottom: 2rem;
@@ -572,7 +607,6 @@
   
   
   /* Responsive Design */
-  /* Mobile Responsive CSS */
 @media (max-width: 768px) {
     /* Navbar Container */
     .navbar {
@@ -670,7 +704,19 @@
           width: 90%; /* Occupies 90% of screen width */
           margin: auto; /* Center-align the cards */
       }
+      .curriculum::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../B11-A2-Kids-School/assets/bg.png);
+        background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for readability */
+        z-index: 1;
+    }
   }
+
   /* Mobile Responsive CSS */
 @media (max-width: 768px) {
     /* Stories Layout */
@@ -749,9 +795,17 @@
   @media (max-width: 768px) {
       /* Section Styling */
       .stories {
-          padding: 1rem; /* Add padding to the section */
-          text-align: left; /* Align all text to the left */
-      }
+        padding: 1rem;
+        text-align:center;
+        background-image: 
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(254, 165, 1, 0.8)),
+            url('../B11-A2-Kids-School/assets/bg.png');
+        background-size: cover; /* Ensures the image covers the entire section */
+        background-position: center; /* Centers the background */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        position: relative;
+    }
+      
   
       /* Layout Adjustment */
       .story-layout {
