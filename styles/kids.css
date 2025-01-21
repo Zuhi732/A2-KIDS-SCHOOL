@@ -1,0 +1,828 @@
+.work-sans-normal {
+    font-family: "Work Sans", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  
+  
+  /* General Styles */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.5;
+  }
+  
+  /* Navbar */
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #FFFFFF;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .Bold{
+      font-weight: bold;
+      font-size: larger;
+  }
+  .navbar .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+  }
+  
+  .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+  }
+  
+  .nav-links a {
+      text-decoration: none; /* No underline */
+      font-weight: 600; /* Bold font */
+  }
+  
+  .nav-links .nth-child1 {
+      color: orange; /* Home */
+  }
+  
+  .nav-links .nth-child2 {
+      color: blue; /* About */
+  }
+  
+  .nav-links .nth-child3 {
+      color: skyblue; /* Facilities */
+  }
+  
+  .nav-links .nth-child4 {
+      color: purple; /* Admission */
+  }
+  /* banner text decoration */
+  .colorEm{
+      color: #fb8c00;
+  }
+  .colortw{
+      color: skyblue;
+  }
+  /* Optional hover effect */
+  .nav-links a:hover {
+      opacity: 0.8; /* Slightly dim background color on hover */
+  }
+  
+  
+  .contact-btn {
+      background-color: #fbc02d;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  
+  /* Banner */
+  .banner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      background-color: #f4f4f4;
+  }
+  
+  .banner-content {
+      max-width: 50%;
+  }
+  
+  .banner-content h1 {
+      font-size: 2.5rem;
+      color: #333;
+  }
+  
+  /* .banner-content h1 span {
+      color: #fbc02d;
+  } */
+  
+  .banner-content button {
+      background-color: #fbc02d;
+      color: #fff;
+      padding: 0.7rem 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  
+  /* Curriculum Section */
+  .curriculum {
+      background-image: url('../assets/bg.png'); /* Reference your uploaded image */
+      text-align: center;
+      padding: 3rem 1.5rem;
+      background-size: 100%; /* Adjusts image scaling */
+      background-position: center;
+      background-repeat: no-repeat;
+      /* background-color: #f9f9f9; Fallback color */
+      position: relative;
+  }
+  
+  /* Overlay Effect for Readability (Optional) */
+  .curriculum::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for readability */
+      z-index: 1;
+  }
+  
+  /* Ensure Content Stays Above the Overlay */
+  .curriculum h2,
+  .cards {
+      position: relative;
+      z-index: 2;
+  }
+  
+  /* Grid Layout for Cards */
+  .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Three equally spaced cards */
+      gap: 1.5rem; /* Space between cards */
+      justify-content: center;
+  }
+  
+  /* Card Styling */
+  .card {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+      transform: translateY(-5px);
+  }
+  
+  /* Individual Gradient Backgrounds for Cards */
+  .card.kinder {
+      background: linear-gradient(to bottom, #dff6ff, white); /* Light blue to white */
+  }
+  
+  .card.elementary {
+      background: linear-gradient(to bottom, #fff5e4, white); /* Light orange to white */
+  }
+  
+  .card.middle {
+      background: linear-gradient(to bottom, #f7e6ff, white); /* Light purple to white */
+  }
+  
+  /* Card Styling */
+  .card {
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+      transform: translateY(-5px);
+  }
+  
+  /* Card Images */
+  .card img {
+      max-width: 80px;
+      margin-bottom: 1rem;
+  }
+  
+  .card h3 {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+  }
+  
+  .card p {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 1rem;
+  }
+  
+  .card a {
+      text-decoration: none;
+      color: #1e88e5;
+      font-weight: bold;
+      font-size: 0.9rem;
+  }
+  
+  
+  /* Card Images */
+  .card img {
+      max-width: 80px;
+      margin-bottom: 1rem;
+  }
+  
+  .card h3 {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+  }
+  
+  .card p {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 1rem;
+  }
+  
+  .card a {
+      text-decoration: none;
+      color: #1e88e5;
+      font-weight: bold;
+      font-size: 0.9rem;
+  }
+  
+  /* Styles for the 'Read More' link with class 'color1' */
+  a.color1 {
+      color: #0d6efd; /* Change this color as needed */
+      font-weight: bold;
+      font-size: 0.9rem;
+      text-decoration: none; /* Removes underline */
+      transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  a.color1:hover {
+      text-decoration: underline; /* Adds underline on hover */
+      color: #0046b8; /* Darker blue on hover */
+  }
+  
+  a.color2 {
+      color:#fbc02d; /* Change this color as needed */
+      font-weight: bold;
+      font-size: 0.9rem;
+      text-decoration: none; /* Removes underline */
+      transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  a.color1:hover {
+      text-decoration: underline; /* Adds underline on hover */
+      color: #fbc02d; /* Darker blue on hover */
+  }
+  a.color3 {
+      color: violet; /* Change this color as needed */
+      font-weight: bold;
+      font-size: 0.9rem;
+      text-decoration: none; /* Removes underline */
+      transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  a.color1:hover {
+      text-decoration: underline; /* Adds underline on hover */
+      color:violet; /* Darker blue on hover */
+  }
+  /* Arrow Navigation */
+  .arrows {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+  }
+  
+  .arrow {
+      background-color:#Fea301;
+      border: none;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 50px;
+      margin: 0 1rem;
+      transition: background-color 0.3s ease;
+  }
+  
+  .arrow:hover {
+      background-color: #e69100;
+  }
+  
+  .stories {
+      background-image: url("../assets/bg.png");
+      background-color: #f4f4f4;
+      padding: 2rem;
+      text-align:center;
+  } 
+  
+  .img {
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), #fea501) , url("../assets/bg.png");
+  }
+  
+  .stories h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #333;
+  }
+  
+  /* Layout for Stories */
+  .story-layout {
+      display: grid;
+      grid-template-columns: 1.5fr 2fr; /* Left section wider */
+      gap: 1.5rem;
+  }
+  
+  /* Left Story */
+  .story-left .story-card {
+      background-color: #ffffff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: left;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .story-left img {
+      width: 100%;
+      height: 400px;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+  }
+  
+  .story-left .date {
+      position: absolute; /* Position relative to the parent */
+      top: 15px; /* Distance from the top of the image */
+      left: 15px; /* Distance from the left of the image */
+      font-size: 0.9rem; /* Slightly larger font size */
+      color: #fff; /* White text */
+      background-color: #1e88e5; /* Blue background */
+      padding: 0.3rem 0.5rem; /* Padding for better readability */
+      border-radius: 5px; /* Rounded corners */
+      display: inline-block; /* Ensure proper block behavior */
+      z-index: 10; /* Ensure it's above the image */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for visibility */
+  }
+  .story-card {
+      position: relative; /* Required for positioning the date element */
+      overflow: hidden; /* Optional, to clip overflow content */
+  }
+  
+  
+  .story-left h3 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 1rem;
+  }
+  
+  .story-left p {
+      font-size: 1rem;
+      color: #666;
+      line-height: 1.6;
+  }
+  
+  
+  /* Right Stories */
+  .story-right {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+      gap: 1rem; /* Spacing between cards */
+      margin-top: 1rem; /* Top margin for spacing */
+  }
+  
+  /* Story Card Styling */
+  .story-right .story-card {
+      background-color: #ffffff; /* White background */
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: left; /* Align content to the left */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      position: relative; /* For positioning child elements like .date */
+      overflow: hidden; /* Ensures content doesn't overflow the card */
+  }
+  
+  /* Image Styling */
+  .story-right img {
+      width: 100%; /* Full width */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 10px; /* Rounded corners */
+      margin-bottom: 0.5rem; /* Spacing below the image */
+  }
+  
+  /* Date Styling */
+  .story-right .date {
+      position: absolute; /* Positioned above the image */
+      top: 15px; /* Distance from the top of the card */
+      left: 15px; /* Distance from the left side */
+      font-size: 0.8rem; /* Smaller font size */
+      color: #fff; /* White text */
+      padding: 0.3rem 0.6rem; /* Padding for better visibility */
+      border-radius: 5px; /* Rounded edges */
+      display: inline-block; /* Inline block for proper padding */
+      z-index: 10; /* Ensures it's above the image */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for better visibility */
+      transform: translateY(-50%); /* Pulls it up slightly */
+  }
+  
+  /* Specific Date Colors */
+  .date-november {
+      background-color: #1e88e5; /* Blue for November */
+      
+  }
+  
+  .date-september {
+      background-color: #e53935; /* Red for September */
+  }
+  
+  .date-july {
+      background-color: #fb8c00; /* Orange for July */
+  }
+  
+  /* Story Card Title Styling */
+  .story-right h3 {
+      font-size: 1rem; /* Standard font size for titles */
+      color: #333; /* Dark text for readability */
+      margin: 0.5rem 0; /* Margin above and below */
+  }
+  /* Style for the button container */
+  .button-container {
+      text-align: center;
+      margin-top: 1rem;
+  }
+  
+  /* View All Button */
+  .view-all {
+      background-color: #000; /* Black background */
+      color: #fff; /* White text */
+      border: none; /* Remove border */
+      padding: 0.8rem 1.5rem; /* Add spacing inside the button */
+      border-radius: 5px; /* Rounded corners */
+      font-size: 1rem; /* Font size */
+      font-weight: bold; /* Bold text */
+      cursor: pointer; /* Change cursor to pointer */
+      transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .view-all:hover {
+      background-color: #333; /* Dark gray on hover */
+  }
+  
+  /* Gap between images */
+  .story-left, .story-right {
+      gap: 1rem; /* Space between images */
+  }
+  
+  .story-right .story-card {
+      margin-bottom: 1rem; /* Add space below each card */
+  }
+  
+  
+  /* Footer General Styling */
+  .footer {
+      background-color: #1e88e5; /* Blue background */
+      color: #ffffff; /* White text */
+      padding: 2rem 1rem;
+  }
+  
+  .footer-container {
+      display: flex;
+      justify-content: space-between; /* Space between sections */
+      flex-wrap: wrap; /* Wrap content for smaller screens */
+      gap: 1rem; /* Space between items */
+  }
+  
+  /* Logo and Info Section */
+  .footer-info {
+      flex: 1; /* Takes proportional space */
+      text-align: left;
+  }
+  
+  .logo-and-title {
+      display: flex;
+      align-items: center; /* Align logo and text vertically */
+      gap: 0.5rem; /* Space between logo and title */
+      margin-bottom: 1rem; /* Space below logo and title */
+  }
+  
+  .logo {
+      width: 50px; /* Adjust logo size */
+      height: 50px;
+      object-fit: contain;
+  }
+  
+  .footer-info h3 {
+      font-size: 1.5rem;
+      margin: 0;
+  }
+  
+  .footer-info p {
+      font-size: 1rem;
+      line-height: 1.5;
+  }
+  
+  /* About Section */
+  .footer-about {
+      flex: 1;
+      text-align: center;
+  }
+  
+  .footer-about h4 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+  }
+  
+  .footer-about ul {
+      list-style: none;
+      padding: 0;
+  }
+  
+  .footer-about li {
+      margin-bottom: 0.5rem;
+  }
+  
+  .footer-about a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1rem;
+  }
+  
+  /* Keep in Touch Section */
+  .footer-contact {
+      flex: 1;
+      text-align: right;
+  }
+  
+  .footer-contact h4 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+  }
+  
+  .social-icons {
+      display: flex;
+      justify-content: flex-end; /* Align to the right */
+      gap: 0.5rem; /* Space between icons */
+  }
+  
+  .social-icons a {
+      color: #ffffff;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+      color: #ffcc00; /* Highlight on hover */
+  }
+  
+  
+  /* Responsive Design */
+  /* navbar */
+  /* Mobile Responsive CSS */
+  @media (max-width: 768px) {
+      /* Navbar Container */
+      .navbar {
+          display: flex;
+          justify-content: space-between; /* Space between logo and menu icon */
+          align-items: center;
+          padding: 1rem;
+          background-color: #fff; /* White background */
+          border-bottom: 3px solid orange; /* Orange border at the bottom */
+          position: relative; /* For positioning dropdown if required */
+      }
+  
+      /* Logo Section */
+      .navbar .logo {
+          display: flex;
+          align-items: center;
+          font-size: 1.5rem; /* Adjust font size */
+          font-weight: bold;
+          color: #000; /* Black text color */
+      }
+  
+      .navbar .logo img {
+          width: 40px; /* Adjust logo image size */
+          height: auto;
+          margin-right: 0.5rem; /* Space between image and text */
+      }
+  
+      /* Hamburger Menu Button */
+      .navbar .menu-icon {
+          width: 40px;
+          height: 40px;
+          background-color: #000; /* Black background for button */
+          border-radius: 50%; /* Circular button */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer; /* Pointer cursor on hover */
+      }
+  
+      .navbar .menu-icon span {
+          width: 20px; /* Adjust line width */
+          height: 2px; /* Line thickness */
+          background-color: #fff; /* White color for lines */
+          display: block;
+          margin: 3px 0; /* Spacing between lines */
+      }
+  
+      /* Hide Navigation Links Completely */
+      .nav-content {
+          display: none; /* Navigation links will not appear on mobile */
+      }
+  }
+  
+  
+  /* Banner */
+  @media (max-width: 768px) {
+      .banner {
+          flex-direction: column; /* Stack image and content vertically */
+          align-items: center; /* Center-align content */
+          padding: 1rem; /* Adjust padding */
+      }
+  
+      .banner-image {
+          order: -1; /* Move image to the top */
+          width: 100%; /* Image takes full width */
+          text-align: center;
+      }
+  
+      .banner-image img {
+          width: 90%; /* Resize the image */
+          height: auto; /* Maintain aspect ratio */
+      }
+  
+      .banner-content {
+          text-align: center; /* Center-align text */
+          max-width: 100%;
+          margin-top: 1rem;
+      }
+  }
+  /* standard curriculam */
+  @media (max-width: 768px) {
+      .cards {
+          grid-template-columns: 1fr; /* Single-column layout */
+          gap: 1rem; /* Spacing between cards */
+          width: 90%; /* Occupies 90% of screen width */
+          margin: auto; /* Center-align the cards */
+      }
+  }
+  /* Mobile Responsive CSS */
+  @media (max-width: 768px) {
+      /* Stories Layout */
+      .story-layout {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+          gap: 1rem; /* Add spacing between story cards */
+          padding: 1rem; /* Add padding around layout */
+      }
+  
+      /* Hide the left story card on mobile */
+      .story-left {
+          display: none;
+      }
+  
+      /* Story Card Styling */
+      .story-card {
+          width: 100%; /* Full width of column */
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          background-color: #fff; /* Add background for clarity */
+          overflow: hidden; /* Prevent content overflow */
+          text-align: left; /* Align text to the left */
+      }
+  
+      /* Images within Story Cards */
+      .story-card img {
+          width: 100%; /* Full width of card */
+          height: auto; /* Maintain aspect ratio */
+          border-radius: 10px 10px 0 0; /* Rounded corners at top */
+      }
+  
+      /* Date Styling */
+      .story-card .date {
+          font-size: 0.7rem; /* Smaller font size for date */
+          padding: 0.3rem 0.5rem; /* Compact padding */
+          background-color: #ffd700; /* Yellow background */
+          position: relative;
+          top: 10px;
+          left: 10px;
+          border-radius: 5px;
+          font-weight: bold;
+      }
+  
+      /* Headings within Story Cards */
+      .story-card h3 {
+          font-size: 0.9rem; /* Smaller heading size */
+          margin: 0.5rem; /* Add margin for spacing */
+          line-height: 1.4; /* Improve readability */
+      }
+  
+      /* Button Container Styling */
+      .button-container {
+          text-align: center; /* Center align button */
+          margin-top: 1.5rem; /* Add space above button */
+      }
+  
+      /* View All Button */
+      .view-all {
+          background-color: #000; /* Black background */
+          color: #fff; /* White text */
+          padding: 0.8rem 1.5rem; /* Add spacing for button */
+          border-radius: 5px; /* Rounded corners */
+          font-size: 1rem;
+          font-weight: bold;
+          border: none; /* Remove border */
+          cursor: pointer; /* Pointer on hover */
+      }
+  }
+  
+  /* Mobile Responsive CSS */
+  @media (max-width: 768px) {
+      /* Section Styling */
+      .stories {
+          padding: 1rem; /* Add padding to the section */
+          text-align: left; /* Align all text to the left */
+      }
+  
+      /* Layout Adjustment */
+      .story-layout {
+          display: grid;
+          grid-template-columns: 1fr; /* Single column layout */
+          gap: 1rem; /* Add space between cards */
+      }
+  
+      /* Left Story Hidden */
+      .story-left {
+          display: none; /* Hide large card */
+      }
+  
+      /* Story Card Styling */
+      .story-card {
+          width: 100%; /* Full width */
+          border-radius: 10px; /* Rounded corners */
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          background-color: #fff; /* Background for clarity */
+          overflow: hidden; /* Prevent overflow */
+          text-align: left; /* Align text to the left */
+      }
+  
+      /* Image Styling */
+      .story-card img {
+          width: 100%; /* Full width */
+          height: auto; /* Maintain aspect ratio */
+          border-radius: 10px 10px 0 0; /* Rounded top corners */
+      }
+  
+      /* Date Styling */
+      .story-card .date {
+          font-size: 0.8rem; /* Smaller font size */
+          padding: 0.3rem 0.5rem; /* Compact padding */
+          background-color: #ffd700; /* Yellow background */
+          border-radius: 5px; /* Rounded edges */
+          margin: 0.5rem 0; /* Add space */
+      }
+  
+      /* Headings within Story Cards */
+      .story-card h3 {
+          font-size: 1rem; /* Adjust heading size */
+          margin: 0.5rem; /* Spacing for readability */
+          line-height: 1.5; /* Improve readability */
+      }
+  
+      /* Button Container Styling */
+      .button-container {
+          text-align: left; /* Align button to the left */
+          margin: 1rem 0; /* Add spacing above */
+      }
+  
+      /* View All Button */
+      .view-all {
+          background-color: #000; /* Black background */
+          color: #fff; /* White text */
+          padding: 0.8rem 1.5rem; /* Button padding */
+          border-radius: 5px; /* Rounded corners */
+          font-size: 1rem;
+          font-weight: bold;
+          border: none;
+          cursor: pointer;
+      }
+  
+      /* Footer Section (if applicable) */
+      .footer-content {
+          text-align: left; /* Align footer text to the left */
+          padding: 1rem;
+          font-size: 0.9rem;
+      }
+  
+      /* Footer Links */
+      .footer-links a {
+          display: block; /* Each link on a new line */
+          margin: 0.5rem 0; /* Spacing between links */
+      }
+  
+      /* Social Icons */
+      .social-icons {
+          display: flex; /* Flex layout */
+          gap: 1rem; /* Spacing between icons */
+          margin-top: 1rem; /* Add top margin */
+      }
+  }
+  
+  
+  
