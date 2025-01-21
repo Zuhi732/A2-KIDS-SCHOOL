@@ -672,75 +672,79 @@
       }
   }
   /* Mobile Responsive CSS */
-  @media (max-width: 768px) {
-      /* Stories Layout */
-      .story-layout {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr); /* Two-column layout */
-          gap: 1rem; /* Add spacing between story cards */
-          padding: 1rem; /* Add padding around layout */
-      }
-  
-      /* Hide the left story card on mobile */
-      .story-left {
-          display: none;
-      }
-  
-      /* Story Card Styling */
-      .story-card {
-          width: 100%; /* Full width of column */
-          border-radius: 10px;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-          background-color: #fff; /* Add background for clarity */
-          overflow: hidden; /* Prevent content overflow */
-          text-align: left; /* Align text to the left */
-      }
-  
-      /* Images within Story Cards */
-      .story-card img {
-          width: 100%; /* Full width of card */
-          height: auto; /* Maintain aspect ratio */
-          border-radius: 10px 10px 0 0; /* Rounded corners at top */
-      }
-  
-      /* Date Styling */
-      .story-card .date {
-          font-size: 0.7rem; /* Smaller font size for date */
-          padding: 0.3rem 0.5rem; /* Compact padding */
-          background-color: #ffd700; /* Yellow background */
-          position: relative;
-          top: 10px;
-          left: 10px;
-          border-radius: 5px;
-          font-weight: bold;
-      }
-  
-      /* Headings within Story Cards */
-      .story-card h3 {
-          font-size: 0.9rem; /* Smaller heading size */
-          margin: 0.5rem; /* Add margin for spacing */
-          line-height: 1.4; /* Improve readability */
-      }
-  
-      /* Button Container Styling */
-      .button-container {
-          text-align: center; /* Center align button */
-          margin-top: 1.5rem; /* Add space above button */
-      }
-  
-      /* View All Button */
-      .view-all {
-          background-color: #000; /* Black background */
-          color: #fff; /* White text */
-          padding: 0.8rem 1.5rem; /* Add spacing for button */
-          border-radius: 5px; /* Rounded corners */
-          font-size: 1rem;
-          font-weight: bold;
-          border: none; /* Remove border */
-          cursor: pointer; /* Pointer on hover */
-      }
-  }
-  
+@media (max-width: 768px) {
+    /* Stories Layout */
+    .story-layout {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+        gap: 1rem; /* Add spacing between story cards */
+        padding: 1rem; /* Add padding around layout */
+    }
+
+    /* Hide the left story card on mobile */
+    .story-left {
+        display: none;
+    }
+
+    /* Story Card Styling */
+    .story-card {
+        width: 100%; /* Full width of column */
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #fff; /* Add background for clarity */
+        overflow: hidden; /* Prevent content overflow */
+        text-align: left; /* Align text to the left */
+    }
+
+    /* Images within Story Cards */
+    .story-card img {
+        width: 100%; /* Full width of card */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px 10px 0 0; /* Rounded corners at top */
+    }
+
+    /* Date Styling */
+    .story-card .date {
+        font-size: 0.7rem; /* Smaller font size for date */
+        padding: 0.3rem 0.5rem; /* Compact padding */
+        background-color: #ffd700; /* Yellow background */
+        position: relative;
+        top: 10px;
+        left: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    /* Headings within Story Cards */
+    .story-card h3 {
+        font-size: 0.9rem; /* Smaller heading size */
+        margin: 0.5rem; /* Add margin for spacing */
+        line-height: 1.4; /* Improve readability */
+    }
+
+    /* Center the View All Button */
+    .button-container {
+        display: flex; /* Use flexbox for centering */
+        justify-content: center; /* Horizontally center the button */
+        align-items: center; /* Vertically align the button if needed */
+        margin: 1rem 0; /* Add spacing above and below */
+        width: 100%; /* Ensure full-width container */
+    }
+
+    .view-all {
+        background-color: #000; /* Black background */
+        color: #fff; /* White text */
+        padding: 0.8rem 1.5rem; /* Add padding for button */
+        border-radius: 5px; /* Rounded corners */
+        font-size: 1rem;
+        font-weight: bold;
+        border: none; /* Remove border */
+        cursor: pointer; /* Pointer cursor on hover */
+        display: inline-block; /* Keep button sizing proper */
+        text-align: center; /* Center text inside button */
+    }
+}
+
   /* Mobile Responsive CSS */
   @media (max-width: 768px) {
       /* Section Styling */
@@ -812,26 +816,95 @@
           cursor: pointer;
       }
   
-      /* Footer Section  */
-      .footer-content {
-          text-align: left; /* Align footer text to the left */
-          padding: 1rem;
-          font-size: 0.9rem;
-      }
-  
-      /* Footer Links */
-      .footer-links a {
-          display: block; /* Each link on a new line */
-          margin: 0.5rem 0; /* Spacing between links */
-      }
-  
-      /* Social Icons */
-      .social-icons {
-          display: flex; /* Flex layout */
-          gap: 1rem; /* Spacing between icons */
-          margin-top: 1rem; /* Add top margin */
-      }
   }
   
-  
-  
+ /* Mobile Responsive CSS for Footer */
+@media (max-width: 768px) {
+    .footer {
+        background-color: #0099ff; /* Background color */
+        padding: 1.5rem; /* Padding for footer */
+        color: #fff; /* White text */
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column; /* Stack sections vertically */
+        gap: 2rem; /* Add spacing between sections */
+        text-align: left; /* Align all sections to the left */
+    }
+
+    /* Logo and Info Section */
+    .footer-info {
+        text-align: left; /* Align text to the left */
+    }
+
+    .footer-info .logo-and-title {
+        display: flex;
+        flex-direction: row; /* Keep logo and title in a row */
+        align-items: center; /* Vertically center logo and title */
+        gap: 0.5rem; /* Spacing between logo and title */
+    }
+
+    .footer-info img.logo {
+        width: 60px; /* Adjust logo size */
+        height: auto;
+    }
+
+    .footer-info h3 {
+        margin: 0;
+        font-size: 1.5rem; /* Adjust title size */
+        line-height: 1.2; /* Line height for readability */
+    }
+
+    .footer-info p {
+        font-size: 0.9rem; /* Paragraph text size */
+        margin-top: 0.5rem;
+        line-height: 1.5; /* Line height for readability */
+    }
+
+    /* About Section */
+    .footer-about {
+        text-align: left; /* Align text to the left */
+    }
+
+    .footer-about h4 {
+        font-size: 1.2rem; /* Heading size */
+        margin-bottom: 1rem; /* Spacing below heading */
+    }
+
+    .footer-about ul {
+        list-style: none; /* Remove bullet points */
+        padding: 0; /* Ensure no extra padding */
+    }
+
+    .footer-about li {
+        margin-bottom: 0.5rem; /* Spacing between links */
+    }
+
+    .footer-about a {
+        color: #fff; /* Link color */
+        text-decoration: none; /* Remove underline */
+        font-size: 1rem;
+    }
+
+    /* Keep In Touch Section */
+    .footer-contact {
+        text-align: left; /* Align text to the left */
+    }
+
+    .footer-contact h4 {
+        font-size: 1.2rem; /* Heading size */
+        margin-bottom: 1rem; /* Spacing below heading */
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: flex-start; /* Align icons to the left */
+        gap: 1rem; /* Spacing between icons */
+    }
+
+    .social-icons .icon {
+        width: 30px; /* Icon size */
+        height: 30px;
+    }
+}
